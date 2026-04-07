@@ -1,0 +1,13 @@
+name: path-filter
+
+on:
+  push:
+    paths:
+      - 'src/**'
+
+jobs:
+  job1:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: echo "Triggered for src"
