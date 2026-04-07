@@ -1,0 +1,19 @@
+name: Pull_Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Print Info
+        run: echo "PR event ci triggered"
+      - name: print working dir
+        run: |
+          echo "printing"
+          pwd
